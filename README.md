@@ -8,8 +8,8 @@
 
 ## Userland:
 
-1. Single JavaScript specification accross all runtimes (Node, Nashorn, Browser, React Native etc)
+1. Single JavaScript specification across all engines (V8, Nashorn, SpiderMonkey, Chakra, Nitro) and use cases (Browser, Desktop, Mobile, Server)
 1. ES6 and ES7 (gradually upgraded)
 2. Babel as transpiler
 3. Flow as typechecker
-4. 
+4. React and React Native for UI 
