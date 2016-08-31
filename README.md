@@ -47,7 +47,7 @@ Confluent, HP, Citrix, Autodesk etc. Today Mesos can run Kubernetes and YARN, bu
 not true. Mesos also integrates well with IaaS stacks, such as OpenStack, CloudStack, OpenShift etc.
 Also, we already have experience with Mesos+Marathon in Paralect. This naturally leads to selection
 of DC/OS / Mesos as foundation of Plato. Things can change, and when they will change we should not 
-cry, but instead gradually adopt "next generation solution™".
+cry, but instead gradually adopt _next generation solution™_.
 
 
 ## Consumer-oriented products
