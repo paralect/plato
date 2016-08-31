@@ -39,7 +39,7 @@ solutions that provide implementation for many listed features.
 1. Metrics collection, aggregation and analysis 
 1. Logs collection, aggregation and analysis
 1. Healthchecks 
-1. Solutions for high-availability and high-scalability
+1. High availability and high scalability for all movable parts 
 1. Application deployment pipeline 
 1. Different types of Queues (In-Memory, Kafka, RabbitMQ)
 1. Task and event scheduler
