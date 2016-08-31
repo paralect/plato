@@ -66,7 +66,10 @@ image processing services, or grid computation, or WebDriver tests etc.
 
 It means that Plato should be always running and always available.
 
-## Userland:
+## Userland
+
+Application specific logic is written in JavaScript. All Plato services, frameworks and 
+tools are consumable via JavaScript API. 
 
 1. Single JavaScript specification across all engines (V8, Nashorn, SpiderMonkey, Chakra, Nitro) and use cases (Browser, Desktop, Mobile, Server)
 2. ES6 and ES7 (gradually upgraded)
