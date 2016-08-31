@@ -1,18 +1,29 @@
 # Plato
 
+_This is a draft of the plan for Plato. Several technologies proposed and more to come
+soon._
+
 Plato is a collection of applications, services, tools and guidelines written and managed 
 as a single unit. Plato provides both foundation for your project and reference implementation
 of several applications used by Paralect. 
 
-Plato is flexible but very responsible. We will support any Plato embraced framework, service or 
-tool as long as you use it. We will provide you with upgrade guidelines when it is time to move forward.   
+Plato is commited to be modern and up to date. Bleeding edge technologies are also welcome,
+as long as reliability and stability are not sacrified. Because landscape of tools, frameworks and
+technologies constantly changes and evolves, someone should track and prepare the way for the changes.
+This is the role that Plato will try to play. When it is time to move forward, you will receive 
+upgrade guidelines and all required documentation.
+
+Plato serves as a communication channel and experimentation playground for all Paralect teammates.
+Any proposal, suggestion, fix or implementation are welcome!
 
 ## Overview
 
 1. Monorepo. All platforms and tech stacks inside one repo. 
 2. Trunc based development. Branches only for releases (almost).
 3. Git LFS for large files (like PSD, MP4, etc)
-4. Paralect specific apps and tools are also part of Plato
+4. Third party software can be both open source or proprietary
+5. Third party software can be both hosted or available in the cloud
+6. Paralect specific apps and tools are also part of Plato
 
 ## Common infrastructure services and tools
 
@@ -34,11 +45,12 @@ solutions that provide implementation for many listed features.
 1. Task and event scheduler
 1. Scalable execution of unit tests
 1. Scalable execution of WebDriver tests
+1. Load and performance testing
 1. Scalable processing of cold data (Hadoop)
 1. Scalable processing of stream data (Heron, Samza, Spark)
 1. High-speed distributed interactive analytics (Drill, Impala, Presto, Druid)
 1. Deployment to top IaaS (maybe PaaS) services: AWS, Azure, DigitalOcean etc.
-1. _quite a bit more..._
+1. _Quite a bit more..._
 
 Root system that needs to be selected is a cluster and/or container management platform. 
 Couple of months ago, [DC/OS][2] project [was announced][1] as compilation of Mesos, Marathon and
@@ -46,9 +58,8 @@ Mesosphere Datacenter Operating System. Among partners are such companies as Mic
 Confluent, HP, Citrix, Autodesk etc. Today Mesos can run Kubernetes and YARN, but vise-versa is
 not true. Mesos also integrates well with IaaS stacks, such as OpenStack, CloudStack, OpenShift etc.
 Also, we already have experience with Mesos+Marathon in Paralect. This naturally leads to selection
-of DC/OS / Mesos as foundation of Plato. Things can change, and when they will change we should not 
+of DC/OS and Mesos as foundation of Plato. Things can change, and when they will change we should not 
 cry, but instead gradually adopt _next generation solution™_.
-
 
 ## Consumer-oriented products
 
@@ -64,7 +75,8 @@ Some services are well consumable by any application, even when application
 is not part of Plato. For example, scheduler that communicates over HTTP or 
 image processing services, or grid computation, or WebDriver tests etc. 
 
-It means that Plato should be always running and always available.
+It means that Plato should be always running, always available and always accessable
+by Paralect teammates and automated processes.
 
 ## Userland
 
