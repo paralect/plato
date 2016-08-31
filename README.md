@@ -13,7 +13,7 @@ Besides common infrastructure services and frameworks, Plato should
 consists of at least the following consumer-oriented products:
 
 1. Paralect internal and external sites, apps, mobile apps, services and tools
-2. Robomongo site
+2. Robomongo site and services
 
 
 ## Userland:
