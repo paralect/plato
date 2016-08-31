@@ -1,5 +1,12 @@
 # Plato
 
+Plato is a collection of applications, services, tools and guidelines written and managed 
+as a single unit. Plato provides both foundation for your project and reference implementation
+of several applications used by Paralect. 
+
+Plato is flexible but very responsible. We will support any Plato embraced framework, service or 
+tool as long as you use it. We will provide you with upgrade guidelines when it is time to move forward.   
+
 ## Overview
 
 1. Monorepo. All platforms and tech stacks inside one repo. 
@@ -23,8 +30,10 @@ solutions that provide implementation for many listed features.
 1. Healthchecks 
 1. Solutions for high-availability and high-scalability
 1. Application deployment pipeline 
-1. Different types of Queues (In-Memory, Kafka, Rabbit)
+1. Different types of Queues (In-Memory, Kafka, RabbitMQ)
 1. Task and event scheduler
+1. Scalable execution of unit tests
+1. Scalable execution of WebDriver tests
 1. Scalable processing of cold data (Hadoop)
 1. Scalable processing of stream data (Heron, Samza, Spark)
 1. High-speed distributed interactive analytics (Drill, Impala, Presto, Druid)
@@ -33,7 +42,7 @@ solutions that provide implementation for many listed features.
 
 Root system that needs to be selected is a cluster and/or container management platform. 
 Couple of months ago, [DC/OS][2] project [was announced][1] as compilation of Mesos, Marathon and
-Mesosphere Datacenter Operating System. Among parners are such companies as Microsoft, Cisco, 
+Mesosphere Datacenter Operating System. Among partners are such companies as Microsoft, Cisco, 
 Confluent, HP, Citrix, Autodesk etc. Today Mesos can run Kubernetes and YARN, but vise-versa is
 not true. Mesos also integrates well with IaaS stacks, such as OpenStack, CloudStack, OpenShift etc.
 Also, we already have experience with Mesos+Marathon in Paralect. This naturally leads to selection
@@ -43,7 +52,7 @@ cry, but instead gradually adopt "next generation solution™".
 
 ## Consumer-oriented products
 
-Besides common infrastructure services and frameworks, Plato should 
+Besides common infrastructure services and frameworks, Plato will 
 consists of at least the following consumer-oriented products:
 
 1. Paralect internal and external sites, apps, mobile apps, services and tools
@@ -53,8 +62,9 @@ consists of at least the following consumer-oriented products:
 
 Some services are well consumable by any application, even when application
 is not part of Plato. For example, scheduler that communicates over HTTP or 
-image processing services, or grid computation etc. 
+image processing services, or grid computation, or WebDriver tests etc. 
 
+It means that Plato should be always running and always available.
 
 ## Userland:
 
