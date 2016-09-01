@@ -56,7 +56,7 @@ Root system that needs to be selected is a cluster and/or container management p
 Couple of months ago, [DC/OS][2] project [was announced][1] as compilation of Mesos, Marathon and
 Mesosphere Datacenter Operating System. Among partners are such companies as Microsoft, Cisco, 
 Confluent, HP, Citrix, Autodesk etc. Today Mesos can run Kubernetes and YARN, but vise-versa is
-not true. Mesos also integrates well with IaaS stacks, such as OpenStack, CloudStack, OpenShift etc.
+not true. Mesos also integrates well with IaaS stacks, such as OpenStack, CloudStack etc.
 Also, we already have experience with Mesos+Marathon in Paralect. This naturally leads to selection
 of DC/OS and Mesos as foundation of Plato. Things can change, and when they will change we should not 
 cry, but instead gradually adopt _next generation solution™_.
