@@ -61,6 +61,9 @@ Also, we already have experience with Mesos+Marathon in Paralect. This naturally
 of DC/OS and Mesos as foundation of Plato. Things can change, and when they will change we should not 
 cry, but instead gradually adopt _next generation solution™_.
 
+Or maybe we need to skip DC/OS and build foundation on Mesos. Or Kubernates... All these choices
+need to be investigated.
+
 ## Consumer-oriented products
 
 Besides common infrastructure services and frameworks, Plato will 
