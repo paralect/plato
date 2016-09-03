@@ -13,7 +13,7 @@ technologies constantly changes and evolves, someone should track and prepare th
 This is the role that Plato will try to play. When it is time to move forward, you will receive 
 upgrade guidelines and all required documentation.
 
-Plato serves as a communication channel and experimentation playground for all Paralect teammates.
+📢 Plato serves as a communication channel and experimentation playground for all Paralect teammates.
 Any proposal, suggestion, fix or implementation are welcome!
 
 ## Overview
