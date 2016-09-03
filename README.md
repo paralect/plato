@@ -25,6 +25,35 @@ Any proposal, suggestion, fix or implementation are welcome!
 5. Third party software can be both hosted or available in the cloud
 6. Paralect specific apps and tools are also part of Plato
 
+## Proposal
+
+_This is a preliminary proposal that is changing every day. Share your 
+opinion or vote for the particualar technology._ 
+
+In two sentences: _"Google architecture for infrastructure. Facebook architecture for applications."_
+
+🔹**Core technologies**
+
+1. **Kubernetes** for Cluster and Container Management
+2. **CoreOS** as Container Operating System
+3. **Docker** as Container Runtime
+
+🔹**Infrastructure development**
+
+1. **Go** as preferable language, if makes sense. Any choice is permitted. 
+
+🔹**Application development**
+
+1. **Single JavaScript Specification** across all engines (V8, Nashorn, SpiderMonkey, Chakra, Nitro) and use cases (Browser, Desktop, Mobile, Server)
+2. **ES6/ES7** as Language Dialect (TODO: specify more strictly in a form of Babel config flags)
+3. **Babel** as Transpiler
+4. **Flow** as Typechecker
+5. **React** and **React Native** for UI 
+6. **Linux** and **OS X** as supported development platforms. Windows is a further goal.
+
+🐥 Nothing is finally selected! This is a proposal from which to start investigations. Share 
+your ideas!
+
 ## Common infrastructure services and tools
 
 Here are some of the most vital services and tools that are required 
