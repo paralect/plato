@@ -34,20 +34,21 @@ In two sentences: _"Google architecture for infrastructure. Facebook architectur
 
 🔹**Core technologies**
 
-1. **Kubernetes** for Cluster and Container Management
-2. **CoreOS** as Container Operating System
-3. **Docker** as Container Runtime
+1. **[Kubernetes](http://kubernetes.io/)** for Cluster and Container Management
+2. **[CoreOS](https://coreos.com/)** as Container Operating System
+3. **[Docker](https://www.docker.com/)** as Container Runtime
+4. **[Alpine](http://www.alpinelinux.org/)** as Linux Distribution for Docker Containers (debatable)
 
 🔹**Infrastructure development**
 
-1. **Go** as preferable language, if makes sense. Any choice is permitted. 
+1. **[Go](https://golang.org/)** as preferable language, if makes sense. Any choice is permitted. 
 
 🔹**Application development**
 
 1. **Single JavaScript Specification** across all engines (V8, Nashorn, SpiderMonkey, Chakra, Nitro) and use cases (Browser, Desktop, Mobile, Server)
 2. **ES6/ES7** as Language Dialect (TODO: specify more strictly in a form of Babel config flags)
-3. **Babel** as Transpiler
-4. **Flow** as Typechecker
+3. **[Babel](https://babeljs.io/)** as Transpiler
+4. **[Flow](https://flowtype.org/)** as Typechecker
 5. **React** and **React Native** for UI 
 6. **Linux** and **OS X** as supported development platforms from day one. Windows in a few months.
 
