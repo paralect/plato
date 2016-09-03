@@ -37,7 +37,7 @@ In two sentences: _"Google architecture for infrastructure. Facebook architectur
 1. **[Kubernetes](http://kubernetes.io/)** for Cluster and Container Management
 2. **[CoreOS](https://coreos.com/)** as Container Operating System
 3. **[Docker](https://www.docker.com/)** as Container Runtime
-4. **[Alpine](http://www.alpinelinux.org/)** as Linux Distribution for Docker Containers (debatable)
+4. **[Alpine](http://www.alpinelinux.org/)** as Linux Distribution for Docker Containers (if possible)
 
 🔹**Infrastructure development**
 
