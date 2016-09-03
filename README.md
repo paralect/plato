@@ -1,4 +1,4 @@
-# Plato
+# 🐒 Plato
 
 _This is a draft of the plan for Plato. Several technologies proposed and more to come
 soon._
