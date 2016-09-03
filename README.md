@@ -94,8 +94,8 @@ not something typical. Mesos also integrates well with IaaS stacks, such as Open
 Also, we already have experience with Mesos+Marathon in Paralect. This naturally leads to selection
 of DC/OS or Mesos as foundation of Plato.
 
-Another mentioned contender is Kubernetes. This project originates from Google, based on in-house cluster 
-manager Borg. Kubernetes is considered production ready, and is available as cloud service: Google Container 
+Another mentioned contender is [Kubernetes](http://kubernetes.io). This project originates from Google, 
+based on in-house cluster manager [Borg](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43438.pdf). Kubernetes is considered production ready, and is available as cloud service: Google Container 
 Engine. Also, Red Hat's OpenShift is based on this technology. Kubernates was designed from "container" 
 point of view from the beginning, while Mesos run through some evolution in order to support containers. 
 
