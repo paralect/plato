@@ -38,7 +38,10 @@ solutions that provide implementation for many listed features.
 1. Service discovery 
 1. Metrics collection, aggregation and analysis 
 1. Logs collection, aggregation and analysis
-1. Healthchecks 
+1. Health checking
+1. Load balancing
+1. Replication of application services
+1. Resource usage monitoring
 1. High availability and high scalability for all movable parts 
 1. Application deployment pipeline 
 1. Different types of Queues (In-Memory, Kafka, RabbitMQ)
@@ -50,19 +53,28 @@ solutions that provide implementation for many listed features.
 1. Scalable processing of stream data (Heron, Samza, Spark)
 1. High-speed distributed interactive analytics (Drill, Impala, Presto, Druid)
 1. Deployment to top IaaS (maybe PaaS) services: AWS, Azure, DigitalOcean etc.
+1. Private container registry 
 1. _Quite a bit more..._
 
 Root system that needs to be selected is a cluster and/or container management platform. 
+
 Couple of months ago, [DC/OS][2] project [was announced][1] as compilation of Mesos, Marathon and
 Mesosphere Datacenter Operating System. Among partners are such companies as Microsoft, Cisco, 
-Confluent, HP, Citrix, Autodesk etc. Today Mesos can run Kubernetes and YARN, but vise-versa is
-not true. Mesos also integrates well with IaaS stacks, such as OpenStack, CloudStack etc.
+Confluent, HP, Citrix, Autodesk etc. Today Mesos can run Kubernetes and YARN, but vice versa is
+not something typical. Mesos also integrates well with IaaS stacks, such as OpenStack, CloudStack etc.
 Also, we already have experience with Mesos+Marathon in Paralect. This naturally leads to selection
-of DC/OS and Mesos as foundation of Plato. Things can change, and when they will change we should not 
-cry, but instead gradually adopt _next generation solution™_.
+of DC/OS or Mesos as foundation of Plato.
 
-Or maybe we need to skip DC/OS and build foundation on Mesos. Or Kubernates... All these choices
-need to be investigated.
+Another mentioned contender is Kubernetes. This project originates from Google, based on in-house cluster 
+manager Borg. Kubernetes is considered production ready, and is available as cloud service: Google Container 
+Engine. Also, Red Hat's OpenShift is based on this technology. Kubernates was designed from "container" 
+point of view from the beginning, while Mesos run through some evolution in order to support containers. 
+
+Next option is a construction of container management solution from lower-level components, like etcd,
+systemd, fleet. The most complex way. 
+
+In any way, things can change, and when they will change we should not cry, but instead gradually 
+adopt _next generation solution™_.
 
 ## Consumer-oriented products
 
