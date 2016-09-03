@@ -49,7 +49,7 @@ In two sentences: _"Google architecture for infrastructure. Facebook architectur
 3. **Babel** as Transpiler
 4. **Flow** as Typechecker
 5. **React** and **React Native** for UI 
-6. **Linux** and **OS X** as supported development platforms. Windows is a further goal.
+6. **Linux** and **OS X** as supported development platforms from day one. Windows in a few months.
 
 🐥 Nothing is finally selected! This is a proposal from which to start investigations. Share 
 your ideas!
