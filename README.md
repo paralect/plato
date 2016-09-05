@@ -57,9 +57,13 @@ In two sentences: _"Google architecture for infrastructure. Facebook architectur
 your ideas!
 
 
-## Principles 
+## Principles and goals
 
-1. Cluster deployment in a single command (via shell or UI). 
+1. Container-centric infrastructure. User creates and manages containers and never physical or virtual machines. In terms of DigitalOcean it means that Plato creates and deletes droplets via [DigitalOcean API](https://developers.digitalocean.com/documentation). 
+2. Plato cluster is controlled via REST API by `plato` command and web UI. 
+3. Single command to deploy and provision fully functional Plato cluster. 
+4. One process per container. 
+
 
 ## Common infrastructure services and tools
 
