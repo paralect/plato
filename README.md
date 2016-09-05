@@ -60,6 +60,7 @@ your ideas!
 ## Principles and goals
 
 1. Container-centric infrastructure. User creates and manages containers and never physical or virtual machines. In terms of DigitalOcean it means that Plato creates and deletes droplets via [DigitalOcean API](https://developers.digitalocean.com/documentation). 
+2. Container-centric development. Developer consumes databases and tools wrapped in containers. Instead of `apt-get install mongodb` developer should do `docker pull mongodb`. 
 2. Plato cluster is controlled via REST API by `plato` command and web UI. 
 3. Single command to deploy and provision fully functional Plato cluster. 
 4. One process per container. 
