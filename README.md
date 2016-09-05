@@ -80,7 +80,7 @@ your ideas!
 ---------------------------------------
 ```
 
-1. Deploy Kubernetes cluster with the help of DigitalOcean API. Simplify it to the point when Kubernetes can be deployed with single shell command. Deployment is complete when Plato API service is running. Further communication with the cluster should be using Plato API and _not_ Kubernetes API. 
+1. Deploy Kubernetes cluster with the help of DigitalOcean API. Simplify it to the point when Kubernetes can be deployed with single shell command. Deployment is complete when Plato API service is running and publicly accessible via HTTP. Further communication with the cluster should be using Plato API and _not_ Kubernetes API. 
 2. Create service that automatically builds Docker images, stores them and plays a role of Docker Registry. This service can be controlled via Plato API: enable/disable/configure.
 3. Create simple web dashboard which allows to control cluster and view some cluster information. All needed functionality should be provided by Plato API. This dashboard should be enabled by default with every Plato installation. 
 
@@ -99,6 +99,7 @@ solutions that provide implementation for many listed features.
 1. Logs collection, aggregation and analysis
 1. Health checking
 1. Load balancing
+1. Rolling update 
 1. Replication of application services
 1. Resource usage monitoring
 1. High availability and high scalability for all movable parts 
