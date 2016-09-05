@@ -67,8 +67,6 @@ your ideas!
 
 ## Plan
 
-Plan for infrastructure:
-
 1. Deploy Kubernetes cluster with the help of DigitalOcean API. Simplify it to the point when Kubernetes can be deployed with single shell command. Deployment is complete when Plato API service is running. Further communication with the cluster should be using Plato API and _not_ Kubernetes API. 
 2. Create service that automatically builds Docker images, stores them and plays a role of Docker Registry. This service can be controlled by Plato API: enable/disable/configure.
 3. Create simple web dashboard which allows to control cluster and view some cluster information. All needed functionality should be provided by Plato API. This dashboard should be enabled by default with every Plato installation. 
