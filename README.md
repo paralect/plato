@@ -61,10 +61,17 @@ your ideas!
 
 1. Container-centric infrastructure. User creates and manages containers and never physical or virtual machines. In terms of DigitalOcean it means that Plato creates and deletes droplets via [DigitalOcean API](https://developers.digitalocean.com/documentation). 
 2. Container-centric development. Developer consumes databases and tools wrapped in containers. Instead of `apt-get install mongodb` developer should do `docker pull mongodb`. 
-2. Plato cluster is controlled via REST API by `plato` command and web UI. 
-3. Single command to deploy and provision fully functional Plato cluster. 
-4. One process per container. 
+3. Plato cluster is controlled via REST API by `plato` command and web UI. 
+4. Single command to deploy and provision fully functional Plato cluster. 
+5. One process per container. 
 
+## Plan
+
+Plan for infrastructure:
+
+1. Deploy Kubernetes cluster with the help of DigitalOcean API. Simplify it to the point when Kubernetes can be deployed with single shell command. Deployment is complete when Plato API service is running. Further communication with the cluster should be using Plato API and _not_ Kubernetes API. 
+2. Create service that automatically builds Docker images, stores them and plays a role of Docker Registry. This service can be controlled by Plato API: enable/disable/configure.
+3. Create simple web dashboard which allows to control cluster and view some cluster information. All needed functionality should be provided by Plato API. This dashboard should be enabled by default with every Plato installation. 
 
 ## Common infrastructure services and tools
 
