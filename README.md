@@ -49,7 +49,7 @@ In two sentences: _"Google architecture for infrastructure. Facebook architectur
 2. **ES6/ES7** as Language Dialect (TODO: specify more strictly in a form of Babel config flags)
 3. **[Babel](https://babeljs.io/)** as Transpiler
 4. **[Flow](https://flowtype.org/)** as Typechecker
-5. **React** and **React Native** for UI 
+5. **[React](https://facebook.github.io/react/)** and **[React Native](https://facebook.github.io/react-native/)** for UI 
 6. **Linux** and **OS X** as supported development platforms from day one. Windows in a few months.
 
 🐥 Nothing is finally selected! This is a proposal from which to start investigations. Share 
