@@ -3,8 +3,8 @@
 _This is a draft of the plan for Plato. Several technologies proposed and more to come
 soon._
 
-Plato is a collection of applications, services, tools and guidelines written and managed 
-as a single unit. Plato provides both foundation for your project and reference implementation
+Plato is a collection of _integrated_ applications, services, tools and guidelines written and managed 
+as a _single unit_. Plato provides both foundation for your project and reference implementation
 of several applications used by Paralect. 
 
 Plato is commited to be modern and up to date. Bleeding edge technologies are also welcome,
@@ -25,25 +25,26 @@ Any proposal, suggestion, fix or implementation are welcome!
 5. Third party software can be both hosted or available in the cloud
 6. Paralect specific apps and tools are also part of Plato
 
-## Proposal
+## Technology Proposal
 
 _This is a preliminary proposal that is changing every day. Share your 
 opinion or vote for the particualar technology._ 
 
 In two sentences: _"Google architecture for infrastructure. Facebook architecture for applications."_
 
-🔹**Core technologies**
+🔹**Core Technologies**
 
+1. **[DigitalOcean](https://www.digitalocean.com/)** as IaaS Provider with deep integration via [API](https://developers.digitalocean.com/documentation/). In the future consider [AWS](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us) and [Google Cloud Platform](https://cloud.google.com) in yet unknown order. 
 1. **[Kubernetes](http://kubernetes.io/)** for Cluster and Container Management
 2. **[CoreOS](https://coreos.com/)** as Container Operating System
 3. **[Docker](https://www.docker.com/)** as Container Runtime
 4. **[Alpine](http://www.alpinelinux.org/)** as Linux Distribution for Docker Containers (if possible)
 
-🔹**Infrastructure development**
+🔹**Infrastructure Development**
 
 1. **[Go](https://golang.org/)** as preferable language, if makes sense. Any choice is permitted. 
 
-🔹**Application development**
+🔹**Application Development**
 
 1. **Single JavaScript Specification** across all engines (V8, Nashorn, SpiderMonkey, Chakra, Nitro) and use cases (Browser, Desktop, Mobile, Server)
 2. **ES6/ES7** as Language Dialect (TODO: specify more strictly in a form of Babel config flags)
@@ -54,6 +55,11 @@ In two sentences: _"Google architecture for infrastructure. Facebook architectur
 
 🐥 Nothing is finally selected! This is a proposal from which to start investigations. Share 
 your ideas!
+
+
+## Principles 
+
+1. Cluster deployment in a single command (via shell or UI). 
 
 ## Common infrastructure services and tools
 
