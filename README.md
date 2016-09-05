@@ -34,7 +34,7 @@ In two sentences: _"Google architecture for infrastructure. Facebook architectur
 
 🔹**Core Technologies**
 
-1. **[DigitalOcean](https://www.digitalocean.com/)** as IaaS Provider with deep integration via [API](https://developers.digitalocean.com/documentation/). In the future consider [AWS](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us) and [Google Cloud Platform](https://cloud.google.com) in yet unknown order. 
+1. **[DigitalOcean](https://www.digitalocean.com/)** as IaaS Provider with deep integration via [API](https://developers.digitalocean.com/documentation/). In the future consider [AWS](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us), [Google Cloud Platform](https://cloud.google.com), [OpenStack](https://www.openstack.org/) in yet unknown order. 
 1. **[Kubernetes](http://kubernetes.io/)** for Cluster and Container Management
 2. **[CoreOS](https://coreos.com/)** as Container Operating System
 3. **[Docker](https://www.docker.com/)** as Container Runtime
@@ -67,8 +67,21 @@ your ideas!
 
 ## Plan
 
+```
+   ---------------
+   |  Plato CLI  |
+   ---------------
+          |
+          |
+---------------------------------------
+|  Plato REST API  |   Plato Web UI   |
+---------------------------------------
+|           Plato Cluster             |
+---------------------------------------
+```
+
 1. Deploy Kubernetes cluster with the help of DigitalOcean API. Simplify it to the point when Kubernetes can be deployed with single shell command. Deployment is complete when Plato API service is running. Further communication with the cluster should be using Plato API and _not_ Kubernetes API. 
-2. Create service that automatically builds Docker images, stores them and plays a role of Docker Registry. This service can be controlled by Plato API: enable/disable/configure.
+2. Create service that automatically builds Docker images, stores them and plays a role of Docker Registry. This service can be controlled via Plato API: enable/disable/configure.
 3. Create simple web dashboard which allows to control cluster and view some cluster information. All needed functionality should be provided by Plato API. This dashboard should be enabled by default with every Plato installation. 
 
 ## Common infrastructure services and tools
