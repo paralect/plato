@@ -65,7 +65,15 @@ your ideas!
 4. Single command to deploy and provision fully functional Plato cluster. 
 5. One process per container. 
 
-## Plan
+## Plan ideas
+
+Three ways:
+
+1. **Simple.** Start from Kubernetes cluster managed by [Google Container Engine](https://cloud.google.com/container-engine/). Use services that build and distribute Docker images (like [Google Container Builder](https://cloud.google.com/container-builder), [Google Container Registry](https://cloud.google.com/container-registry), [Codeship](codeship.com), [Quay](https://quay.io/) etc.).
+2. **Complex.** Integrate with IaaS (like DigitalOcean) and deploy Kubernetes cluster manually. Deploy our own Docker Image Builder and Registry. Right now Kubernetes do not support just released DigitalOcean [Block Storage](https://www.digitalocean.com/products/storage/) as Persistent Volume which is required for statefull containers. This should be implemented or some workarounds like [Flocker](https://clusterhq.com/flocker) should be used. Or we can use [Google Compute Engine](https://cloud.google.com/compute) (this is not Container Engine), [AWS EC2](https://aws.amazon.com/ec2/) or any other supported by Kubernetes IaaS.
+4. **Normal.** Mix of previous two ways. 
+
+Complex way:
 
 ```
    ---------------
