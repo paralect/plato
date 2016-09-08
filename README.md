@@ -25,7 +25,7 @@ Any proposal, suggestion, fix or implementation are welcome!
 5. Third party software can be both hosted or available in the cloud
 6. Paralect specific apps and tools are also part of Plato
 
-## Technology Proposal
+# Technology Proposal
 
 _This is a preliminary proposal that is changing every day. Share your 
 opinion or vote for the particualar technology._ 
@@ -36,7 +36,7 @@ In two sentences: _"Google architecture for infrastructure. Facebook architectur
 
 1. **[DigitalOcean](https://www.digitalocean.com/)** as IaaS Provider with deep integration via [API](https://developers.digitalocean.com/documentation/). In the future consider [AWS](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us), [Google Cloud Platform](https://cloud.google.com), [OpenStack](https://www.openstack.org/) in yet unknown order. 
 1. **[Kubernetes](http://kubernetes.io/)** for Cluster and Container Management
-2. **[GlusterFS](https://www.gluster.org/)** as Network Filesystem ([SDS](https://en.wikipedia.org/wiki/Software-defined_storage))
+2. **[GlusterFS](https://www.gluster.org/) or [Torus](https://github.com/coreos/torus)** as Network Filesystem ([SDS](https://en.wikipedia.org/wiki/Software-defined_storage)) 
 3. **[CoreOS](https://coreos.com/)** as Container Operating System
 4. **[Docker](https://www.docker.com/)** as Container Runtime
 5. **[Alpine](http://www.alpinelinux.org/)** as Linux Distribution for Docker Containers (if possible)
@@ -58,7 +58,7 @@ In two sentences: _"Google architecture for infrastructure. Facebook architectur
 your ideas!
 
 
-## Principles and goals
+# Principles and goals
 
 1. Container-centric infrastructure. User creates and manages containers and never physical or virtual machines. In terms of DigitalOcean, for example, it means that Plato creates and deletes droplets via [DigitalOcean API](https://developers.digitalocean.com/documentation). 
 2. Container-centric development. Developer consumes databases and tools wrapped in containers. Instead of `apt-get install mongodb` developer should do `docker pull mongodb`. 
@@ -67,7 +67,7 @@ your ideas!
 5. Single command to deploy and provision fully functional Plato cluster. 
 6. One process per container. 
 
-## Things to watch out 
+# Things to watch out 
 
 Here we are keeping our eyes on different technologies that are potential candidates for adoption. 
 Things evolve rapidly and the following list also should be up to date. 
