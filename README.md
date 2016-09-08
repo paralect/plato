@@ -112,7 +112,7 @@ Confluent, HP, Citrix, Autodesk etc.
 There’s been an explosion of new container-centric operating systems. We need at least one in the 
 beginning.
 
-1. **CoreOS**.
+1. **CoreOS**. The first container-optimized OS. First alpha release was in July 2013. Based on principles from the Google Chrome OS. No package management is provided by the OS. Libraries and packages are part of the application developed using Containers. Container runtime, SSH, and kernel are the primary components. Every process is managed by systemd. The management of CoreOS machines is done at the cluster level rather than at an individual machine level.
 2. **Ubuntu Snappy**.
 3. **Red Hat Project Atomic**.
 4. **RancherOS**.
