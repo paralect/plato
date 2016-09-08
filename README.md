@@ -39,6 +39,7 @@ In two sentences: _"Google architecture for infrastructure. Facebook architectur
 2. **[GlusterFS](https://www.gluster.org/) or [Torus](https://github.com/coreos/torus)** as Network Filesystem ([SDS](https://en.wikipedia.org/wiki/Software-defined_storage)) 
 3. **[CoreOS](https://coreos.com/)** as Container Operating System
 4. **[Docker](https://www.docker.com/)** as Container Runtime
+5. **[Prometheus](https://prometheus.io)** as Container Cluster Monitoring: instrumentation, collection, querying, and alerting.
 5. **[Alpine](http://www.alpinelinux.org/)** as Linux Distribution for Docker Containers (if possible)
 
 🔹**Infrastructure Development**
@@ -147,7 +148,7 @@ Distributed, consistent key-value stores for shared configuration and service di
 2. **etcd.**
 3. **Consul.**
 
-####🔀 **Load balancers**
+####🔀 **Load Balancers and Proxies**
 
 1. **Nginx.**
 2. **HAProxy.**
