@@ -69,31 +69,41 @@ your ideas!
 
 ## Things to watch out 
 
+Here we are keeping our eyes on different technologies that are potential candidates for adoption. 
+Things evolve rapidly and the following list also should be up to date. 
+
+Regardless of our today's choice, we should constantly track the most notable technologies and services. 
+
 ####**IaaS Providers**
 
-Ideally, we should support all major providers.
+Ideally, we should support all major providers. Today we need at least one.
 
 1. **[DigitalOcean](https://www.digitalocean.com/)** is one of the most simple and affordable providers with clean price and [API](https://developers.digitalocean.com/documentation/). The only downside is a limited functionality, comparing with more mature IaaS platforms. Slowly, but they are progressing. At July 13, 2016 they released [Block Storage](https://www.digitalocean.com/company/blog/block-storage-more-space-to-scale/) that will try to compete with [EBS](https://aws.amazon.com/ebs/), [GPS](https://cloud.google.com/compute/docs/disks/) and similar. Not sure that DigitalOcean has everything that we need, but it worth to at least try it.
-2. [AWS](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us), [Google Cloud Platform](https://cloud.google.com) are the most mature platforms. Each platforms is considered a safe bet.   
+2. [AWS](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us), [Google Cloud Platform](https://cloud.google.com) are the most mature platforms. Each platform is considered as a safe bet.   
 3. **[OpenStack](https://www.openstack.org/)** is a platform for deploying and managing private or public IaaS clusters. Usually installed on bare-metal machines. 
 
 ####**Network Filesystem**
 
+Major platforms provide some form of [Software-defined Storage](https://en.wikipedia.org/wiki/Software-defined_storage). Amazon Elastic Block Storage, Google Persistent Disk and Digital Ocean Block Storage. But some still run Network Filesystem on top of this storages: [NASA Jet Propulsion Laboratory Case Study](https://aws.amazon.com/solutions/case-studies/nasa-jpl-curiosity/).  
+
+We need Network Filesystem to abstract storage from computing nodes. More specifically, we need to provide persistent storage for containers. 
+
 1. **GlusterFS**. Production ready. Used by OpenShift platform.
 2. **CephFS**. Production ready starting from [April 21, 2016](http://thenewstack.io/converging-storage-cephfs-now-production-ready).
-3. **Torus**. Created and supported by the CoreOS team. Claims to be a "[cloud-native and modern distributed storage](https://coreos.com/blog/torus-distributed-storage-by-coreos.html)". Not ready for production, early days.
+3. **Torus**. Created and supported by the CoreOS team. Claims to be a "[cloud-native and modern distributed storage](https://coreos.com/blog/torus-distributed-storage-by-coreos.html)". Not ready for production, early days. 
+Still, it make sense to give Torus a try.
 
-####**Cluster Management**
+####**Cluster and Container Management**
 
 1. **Kubernetes.** Originates from Google, 
 based on in-house cluster manager [Borg](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43438.pdf). Kubernetes is considered production ready, and is available as cloud service: Google Container 
 Engine. Also, Red Hat's OpenShift is based on this technology. Kubernates was designed from "container" 
 point of view from the beginning.
-2. **Mesos.**
+2. **Mesos.** Known and battle proven on large scale clusters in Twitter, Facebook and LinkedIn.
 3. **DC/OS.** At April 19, 2016 [DC/OS][2] project [was announced][1] as compilation of Mesos, Marathon and
 Mesosphere Datacenter Operating System. Among partners are such companies as Microsoft, Cisco, 
 Confluent, HP, Citrix, Autodesk etc.
-4. **Docker Swarm**.
+4. **Docker Swarm**. Released at June 20, 2016 with [Docker 1.12](https://blog.docker.com/2016/06/docker-1-12-built-in-orchestration). "Native" clustering for Docker. 
 
 ## Plan ideas
 
