@@ -128,7 +128,11 @@ by CoreOS, but initially [gained support](https://www.infoq.com/news/2015/05/app
 
 #### 📡 **Networking**
 
-1. **Flannel.** Virtual network maintained by the CoreOS project. 
+Virtual networks that are portable across data centers and public clouds.
+
+1. **[Flannel](https://coreos.com/flannel/docs/latest/).** Virtual network maintained by the CoreOS project. 
+2. **[Calico](https://www.projectcalico.org).** 
+3. **[Weave](https://www.weave.works/).** Simple, resilient multi-host Docker networking.
 
 ####🚥 **Service Discovery and Configuration**
 
