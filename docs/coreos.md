@@ -194,7 +194,56 @@ formats.
 The systemctl utility can be used for basic monitoring and troubleshooting of the
 systemd units.
 
-systemctl restart docker.service 
+    systemctl status docker.service
+    sudo systemctl restart docker.service        # Restart service
+    
+When a service file is changed or environment variables are changed, we need to execute
+the following command to reload configuration before restarting the service for the
+changes to take effect:
+
+    sudo systemctl daemon-reload
+    
+The following command is useful to see the units that have failed:
+
+    systemctl —failed
+
+**Cloud-config**
+
+Cloud-config can be validated. 
+
+In case there are runtime errors, we can check it with:
+
+    journalctl -b _EXE=/usr/bin/coreoscloudinit
+    
+#### Important files and directories
+
+1. The machine ID for the particular CoreOS node - /etc/machine-id
+2. The public and private IP address (COREOS_PUBLIC_IPV4 and COREOS_PRIVATE_IPV4) - /etc/environment
+3. cloud-config.yaml associated with providers such as Vagrant, AWS, and GCE-
+/usr/share/oem/cloud-config.yaml. (CoreOS first executes this cloud-config and then executes the
+user-provided cloud-config.)
+4. Release channel and update strategy - /etc/coreos/update.conf
+5. The systemd-journald logs - /var/log/journal
+
+#### Common mistakes and possible solutions
+
+1. For CoreOS on the cloud provider, there is a need to open up ports 2379 and 2380 on
+the VM. 2379 is used for etcd client-to-server communication, and 2380 is used for
+etcd server-to-server communication.
+2. A discovery token needs to be generated every time for each cluster and cannot be
+shared. When a stale discovery token is shared, members will not be able to join the
+etcd cluster.
+3. Running multiple CoreOS clusters with Vagrant simultaneously can cause issues
+because of overlapping IP ranges. Care should be taken so that common parameters
+such as the IP address are not shared across clusters.
+4. Cloud-config YAML files need to be properly indented. It is better to use the cloudconfig
+validator to check for issues.
+5. When using discovery token, CoreOS node needs to have Internet access to access
+the token service.
+6. When creating a discovery token, you need to use the size based on the count of
+members and all members need to be part of the bootstrap. If all members are not
+present, the cluster will not be formed. Members can be added or removed later.
+
 
 
 References:
