@@ -126,6 +126,10 @@ beginning.
 1. **Appc.** Not runtime but "well-specified and community developed specification for application containers". Started
 by CoreOS, but initially [gained support](https://www.infoq.com/news/2015/05/appc-spec-gains-support) from Google, Apcera, Red Hat and VMware.
 
+#### 📡 **Networking**
+
+1. **Flannel.** Virtual network maintained by the CoreOS project. 
+
 ####🚥 **Service Discovery and Configuration**
 
 Distributed, consistent key-value stores for shared configuration and service discovery.
