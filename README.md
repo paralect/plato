@@ -60,11 +60,40 @@ your ideas!
 
 ## Principles and goals
 
-1. Container-centric infrastructure. User creates and manages containers and never physical or virtual machines. In terms of DigitalOcean it means that Plato creates and deletes droplets via [DigitalOcean API](https://developers.digitalocean.com/documentation). 
+1. Container-centric infrastructure. User creates and manages containers and never physical or virtual machines. In terms of DigitalOcean, for example, it means that Plato creates and deletes droplets via [DigitalOcean API](https://developers.digitalocean.com/documentation). 
 2. Container-centric development. Developer consumes databases and tools wrapped in containers. Instead of `apt-get install mongodb` developer should do `docker pull mongodb`. 
-3. Plato cluster is controlled via REST API by `plato` command and web UI. 
-4. Single command to deploy and provision fully functional Plato cluster. 
-5. One process per container. 
+3. Managing storage is a distinct problem from managing compute. Should be a clear separation of how storage is provided from how it is consumed. On commodity hardware this implies usage of Network Filesystems, like GlusterFS, Ceph, Torus etc. 
+4. Plato cluster is controlled via REST API by `plato` command and web UI. 
+5. Single command to deploy and provision fully functional Plato cluster. 
+6. One process per container. 
+
+## Things to watch out 
+
+####**IaaS Providers**
+
+Ideally, we should support all major providers.
+
+1. **[DigitalOcean](https://www.digitalocean.com/)** is one of the most simple and affordable providers with clean price and [API](https://developers.digitalocean.com/documentation/). The only downside is a limited functionality, comparing with more mature IaaS platforms. Slowly, but they are progressing. At July 13, 2016 they released [Block Storage](https://www.digitalocean.com/company/blog/block-storage-more-space-to-scale/) that will try to compete with [EBS](https://aws.amazon.com/ebs/), [GPS](https://cloud.google.com/compute/docs/disks/) and similar. Not sure that DigitalOcean has everything that we need, but it worth to at least try it.
+2. [AWS](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us), [Google Cloud Platform](https://cloud.google.com) are the most mature platforms. Each platforms is considered a safe bet.   
+3. **[OpenStack](https://www.openstack.org/)** is a platform for deploying and managing private or public IaaS clusters. Usually installed on bare-metal machines. 
+
+####**Network Filesystem**
+
+1. **GlusterFS**. Production ready. Used by OpenShift platform.
+2. **CephFS**. Production ready starting from [April 21, 2016](http://thenewstack.io/converging-storage-cephfs-now-production-ready).
+3. **Torus**. Created and supported by the CoreOS team. Claims to be a "[cloud-native and modern distributed storage](https://coreos.com/blog/torus-distributed-storage-by-coreos.html)". Not ready for production, early days.
+
+####**Cluster Management**
+
+1. **Kubernetes.** Originates from Google, 
+based on in-house cluster manager [Borg](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43438.pdf). Kubernetes is considered production ready, and is available as cloud service: Google Container 
+Engine. Also, Red Hat's OpenShift is based on this technology. Kubernates was designed from "container" 
+point of view from the beginning.
+2. **Mesos.**
+3. **DC/OS.** At April 19, 2016 [DC/OS][2] project [was announced][1] as compilation of Mesos, Marathon and
+Mesosphere Datacenter Operating System. Among partners are such companies as Microsoft, Cisco, 
+Confluent, HP, Citrix, Autodesk etc.
+4. **Docker Swarm**.
 
 ## Plan ideas
 
