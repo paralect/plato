@@ -122,7 +122,12 @@ beginning.
 #### 🔲 **Containers Runtime**
 
 1. **Docker.**
-2. **Rocket (rkt).** Developed by CoreOS company.
+2. **Rocket (rkt).** Rkt is the Container runtime developed by CoreOS. Rkt does not have a daemon and is
+managed by `systemd`. Rkt uses the Application Container image (ACI) image format,
+which is according to the [Appc specification](https://github.com/appc/spec). Rkt’s
+execution is split into three stages. This approach was taken so that some of the stages can
+be replaced by a different implementation if needed. Rkt can also 
+[run Docker images](https://github.com/coreos/rkt/blob/master/Documentation/running-docker-images.md).
 1. **Appc.** Not runtime but "well-specified and community developed specification for application containers". Started
 by CoreOS, but initially [gained support](https://www.infoq.com/news/2015/05/appc-spec-gains-support) from Google, Apcera, Red Hat and VMware.
 
