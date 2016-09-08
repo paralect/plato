@@ -92,6 +92,7 @@ We need Network Filesystem to abstract storage from computing nodes. More specif
 2. **CephFS**. Production ready starting from [April 21, 2016](http://thenewstack.io/converging-storage-cephfs-now-production-ready).
 3. **Torus**. Created and supported by the CoreOS team. Claims to be a "[cloud-native and modern distributed storage](https://coreos.com/blog/torus-distributed-storage-by-coreos.html)". Not ready for production, early days. 
 Still, it make sense to give Torus a try.
+4. **Flocker.**
 
 ####🚀 **Cluster and Container Management**
 
@@ -104,6 +105,7 @@ point of view from the beginning.
 Mesosphere Datacenter Operating System. Among partners are such companies as Microsoft, Cisco, 
 Confluent, HP, Citrix, Autodesk etc.
 4. **Docker Swarm**. Released at June 20, 2016 with [Docker 1.12](https://blog.docker.com/2016/06/docker-1-12-built-in-orchestration). "Native" clustering for Docker. 
+5. **Fleet**. 
 
 ####💻 **Container Operating System**
 
@@ -123,6 +125,20 @@ beginning.
 2. **Rocket (rkt).** Developed by CoreOS company.
 1. **Appc.** Not runtime but "well-specified and community developed specification for application containers". Started
 by CoreOS, but initially [gained support](https://www.infoq.com/news/2015/05/appc-spec-gains-support) from Google, Apcera, Red Hat and VMware.
+
+####🚥 **Service Discovery and Configuration**
+
+Distributed, consistent key-value stores for shared configuration and service discovery.
+
+1. **ZooKeeper.**
+2. **etcd.**
+3. **Consul.**
+
+####🔀 **Load balancers**
+
+1. **Nginx.**
+2. **HAProxy.**
+
 
 ## Plan ideas
 
