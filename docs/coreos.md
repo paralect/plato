@@ -244,6 +244,78 @@ the token service.
 members and all members need to be part of the bootstrap. If all members are not
 present, the cluster will not be formed. Members can be added or removed later.
 
+#### CoreOS release cycle
+
+Alpha, Beta, and Stable are release channels within CoreOS. CoreOS releases progress
+through each channel in this order: Alpha->Beta->Stable.
+
+The major version number (for example, 1164 in 1164.3.0) is the number of days from July
+13, 2013, which was the CoreOS epoch.
+
+    cat /etc/os-release      # Check the CoreOS version in the node
+
+#### Partition table
+
+    sudo cgpt show /dev/xvda   # Shows partition table in one of the CoreOS cluster nodes
+    df –k                      # GNU tools are available (free space)
+    
+#### CoreOS automatic update
+
+CoreOS relies on the automatic update mechanism to keep the OS up to date.
+The following are some aspects of the CoreOS update:
+
+1. The CoreOS update mechanism is based on Google’s open source Omaha protocol
+(https://code.google.com/p/omaha/) that is used in the Chrome browser.
+2. Either CoreOS public servers or private servers can be used as an image repository.
+3. The dual partition scheme is used where an update is done to the secondary partition
+while the primary partition is not touched. On reboot, there is a binary swap from the
+primary to the secondary partition. This keeps the update scheme robust. If there are
+issues with the new image, CoreOS automatically rolls back to the working image in
+the other partition.
+4. Images are signed and verified on each update.
+
+#### Update and reboot services
+
+There are two critical services controlling update and reboot in CoreOS. They are updateengine.
+service and locksmithd.service
+
+`update-engine.service` takes care of periodically checking for updates from the
+appropriate release channel specified. A default check for update is done 10 minutes after
+reboot or at one-hour intervals.
+
+    systemctl status update-engine.service          # Shows the status of service
+
+`locksmithd.service` takes care of rebooting the CoreOS node using the selected reboot
+strategy. Locksmithd.service runs as a daemon.
+
+The following are the four configurable strategies for the CoreOS node reboot after a new
+image update.
+
+1. The `etcd-lock` scheme. In this scheme, the reboot is done after first taking a lock from etcd. In a multinode
+cluster, this works out really well as it prevents all the nodes from rebooting at the same
+time and maintains cluster integrity. We can control the number of nodes that can reboot
+together using the lock count mechanism.
+2. `reboot`. In this scheme, the node is rebooted immediately without taking a lock from the cluster.
+This is useful in scenarios where the upgrade is manually controlled by the administrator
+3. `best-effort`. In this scheme, it is first checked whether etcd is running. If etcd is running, the etcd
+lock is acquired and then the rebooting is done. Otherwise, reboot is done immediately.
+This is a variation of the etcd-lock scheme mentioned before.
+4. `off`. This causes locksmithd to exit and do nothing. This option should not be chosen unless the
+administrator wants to control the upgrades with great precision.
+
+Locksmith groups were introduced in locksmithd version 0.3.1. With groups, we can
+group a set of CoreOS nodes and locking will be applicable to this group.
+
+`locksmithctl` is a frontend CLI to control Locksmith. Using this, we can get the status of
+locksmith service, lock and unlock groups, set the lock max count, and so on.
+
+CoreOS update options can be set using either cloud-config or by changing
+configuration files manually. Using cloud-config, update options are configured as part
+of the node configuration after reboot. With the manual approach, we need to start the
+appropriate update services for changes to take effect. The manual approach is used
+mainly to debug.
+
+
 
 
 References:
