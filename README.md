@@ -152,6 +152,14 @@ Distributed, consistent key-value stores for shared configuration and service di
 1. **Nginx.**
 2. **HAProxy.**
 
+#### 📈 **Monitoring**
+
+1. **[Prometheus](https://prometheus.io).** Monitoring system and time series database. Together with
+Kubernetes, Prometheus is a member of [Cloud Native Computing Foundation](https://cncf.io/projects).
+Actively [promoted](https://coreos.com/blog/coreos-and-prometheus-improve-cluster-monitoring.html) by CoreOS.
+2. **[cAdvisor](https://github.com/google/cadvisor).** Analyzes resource usage and performance characteristics of running containers. Google project. Has native support for Docker containers.
+3. **[Sysdig](http://www.sysdig.org/).** Sysdig is open source, system-level exploration: capture system state and activity from a running Linux instance, then save, filter and analyze. 
+4. **[NewRelic](https://newrelic.com/).** Commercial, but good :)
 
 ## Plan ideas
 
