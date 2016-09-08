@@ -37,10 +37,10 @@ In two sentences: _"Google architecture for infrastructure. Facebook architectur
 1. **[DigitalOcean](https://www.digitalocean.com/)** as IaaS Provider with deep integration via [API](https://developers.digitalocean.com/documentation/). In the future consider [AWS](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us), [Google Cloud Platform](https://cloud.google.com), [OpenStack](https://www.openstack.org/) in yet unknown order. 
 1. **[Kubernetes](http://kubernetes.io/)** for Cluster and Container Management
 2. **[GlusterFS](https://www.gluster.org/) or [Torus](https://github.com/coreos/torus)** as Network Filesystem ([SDS](https://en.wikipedia.org/wiki/Software-defined_storage)) 
-3. **[CoreOS](https://coreos.com/)** as Container Operating System
+3. **[CoreOS](https://coreos.com/)** as Cluster Operating System
 4. **[Docker](https://www.docker.com/)** as Container Runtime
 5. **[Prometheus](https://prometheus.io)** as Container Cluster Monitoring: instrumentation, collection, querying, and alerting.
-5. **[Alpine](http://www.alpinelinux.org/)** as Linux Distribution for Docker Containers (if possible)
+5. **[Alpine](http://www.alpinelinux.org/)** as Linux Distribution for Docker Images (if possible)
 
 🔹**Infrastructure Development**
 
