@@ -75,7 +75,7 @@ Things evolve rapidly and the following list also should be up to date.
 
 Regardless of our today's choice, we should constantly track the most notable technologies and services. 
 
-####🌏 **IaaS Providers**
+#### 🌏 **IaaS Providers**
 
 Ideally, we should support all major providers :) Today we need at least one.
 
@@ -83,7 +83,7 @@ Ideally, we should support all major providers :) Today we need at least one.
 2. [AWS](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us), [Google Cloud Platform](https://cloud.google.com) are the most mature platforms. Each platform is considered as a safe bet.   
 3. **[OpenStack](https://www.openstack.org/)** is a platform for deploying and managing private or public IaaS clusters. Usually installed on bare-metal machines. 
 
-####🚉  **Network Filesystem**
+#### 🚉  **Network Filesystem**
 
 Major platforms provide some form of [Software-defined Storage](https://en.wikipedia.org/wiki/Software-defined_storage). Amazon Elastic Block Storage, Google Persistent Disk and Digital Ocean Block Storage. But some still run Network Filesystem on top of this storages: [NASA Jet Propulsion Laboratory Case Study](https://aws.amazon.com/solutions/case-studies/nasa-jpl-curiosity/).  
 
@@ -95,7 +95,7 @@ We need Network Filesystem to abstract storage from computing nodes. More specif
 Still, it make sense to give Torus a try.
 4. **Flocker.**
 
-####🚀 **Cluster and Container Management**
+#### 🚀 **Cluster and Container Management**
 
 1. **Kubernetes.** Originates from Google, 
 based on in-house cluster manager [Borg](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43438.pdf). Kubernetes is considered production ready, and is available as cloud service: Google Container 
@@ -108,7 +108,7 @@ Confluent, HP, Citrix, Autodesk etc.
 4. **Docker Swarm**. Released at June 20, 2016 with [Docker 1.12](https://blog.docker.com/2016/06/docker-1-12-built-in-orchestration). "Native" clustering for Docker. 
 5. **Fleet**. 
 
-####💻 **Container Operating System**
+#### 💻 **Container Operating System**
 
 There’s been an explosion of new container-centric operating systems. We need at least one in the 
 beginning.
@@ -140,7 +140,7 @@ Virtual networks that are portable across data centers and public clouds.
 2. **[Calico](https://www.projectcalico.org).** 
 3. **[Weave](https://www.weave.works/).** Simple, resilient multi-host Docker networking.
 
-####🚥 **Service Discovery and Configuration**
+#### 🚥 **Service Discovery and Configuration**
 
 Distributed, consistent key-value stores for shared configuration and service discovery.
 
@@ -148,7 +148,7 @@ Distributed, consistent key-value stores for shared configuration and service di
 2. **etcd.**
 3. **Consul.**
 
-####🔀 **Load Balancers and Proxies**
+#### 🔀 **Load Balancers and Proxies**
 
 1. **Nginx.**
 2. **HAProxy.**
