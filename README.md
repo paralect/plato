@@ -162,6 +162,16 @@ Actively [promoted](https://coreos.com/blog/coreos-and-prometheus-improve-cluste
 3. **[Sysdig](http://www.sysdig.org/).** Sysdig is open source, system-level exploration: capture system state and activity from a running Linux instance, then save, filter and analyze. 
 4. **[NewRelic](https://newrelic.com/).** Commercial, but good :)
 
+#### 📦 **Hardware Virtualization and Hypervisors**
+
+For now, we mostly interested in Type-2 hypervisors. They allow to run local cluster of unmodified operating systems on top of conventional operating systems. This is required mostly for low-level work on infrastructure level.  
+
+1. **VirtualBox.** Open source Type-2 hypervisor.
+2. **Vagrant.** Not directly related to virtualization, but provides convenient tools to manage local virtual machines.  
+3. **Hyper-V** and **VMware ESXi**. Commercial Type-1 hypervisors.
+4. **VMWare Workstation/Fussion.** Commercial Type-2 hypervisor. 
+
+
 ## Plan ideas
 
 Three ways:
