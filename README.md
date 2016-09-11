@@ -38,9 +38,10 @@ In two sentences: _"Google architecture for infrastructure. Facebook architectur
 1. **[Kubernetes](http://kubernetes.io/)** for Cluster and Container Management
 2. **[GlusterFS](https://www.gluster.org/) or [Torus](https://github.com/coreos/torus)** as Network Filesystem ([SDS](https://en.wikipedia.org/wiki/Software-defined_storage)) 
 3. **[CoreOS](https://coreos.com/)** as Cluster Operating System
-4. **[Docker](https://www.docker.com/)** as Container Runtime
-5. **[Prometheus](https://prometheus.io)** as Container Cluster Monitoring: instrumentation, collection, querying, and alerting.
-5. **[Alpine](http://www.alpinelinux.org/)** as Linux Distribution for Docker Images (if possible)
+4. **[systemd](https://freedesktop.org/wiki/Software/systemd)** as Linux Init System
+5. **[Docker](https://www.docker.com/)** as Container Runtime
+6. **[Prometheus](https://prometheus.io)** as Container Cluster Monitoring: instrumentation, collection, querying, and alerting.
+7. **[Alpine](http://www.alpinelinux.org/)** as Linux Distribution for Docker Images (if possible)
 
 🔹**Infrastructure Development**
 
@@ -171,6 +172,19 @@ For now, we mostly interested in Type-2 hypervisors. They allow to run local clu
 3. **Hyper-V** and **VMware ESXi**. Commercial Type-1 hypervisors.
 4. **VMWare Workstation/Fussion.** Commercial Type-2 hypervisor. 
 
+#### 🌀 **UNIX init systems**
+
+Init system is important, because it is a built-in and "OS native" functionality to manage lifetime of processeses
+and, with modern init systems, even containers. Besides this, init system defines behaviour of operating system 
+throughout the lifetime.
+
+1. **[systemd](https://freedesktop.org/wiki/Software/systemd).** Released at 2010 by RedHat developer [Lennart Poettering](https://en.wikipedia.org/wiki/Lennart_Poettering) and today is adopted by most major Linux distributions,
+including Ubuntu, Debian, OpenSUSE, Oracle Linux, CoreOS etc. Scope of this project is fascinating. Motivation
+for new init system is explained by Poettering in his [6 years old article](http://0pointer.de/blog/projects/systemd.html).
+2. **[Upstart](http://upstart.ubuntu.com).** Released at 2006 by Canonical. At some point it was adopted even by RedHat.
+But today seems loosing positions to systemd.
+3. **[System V init](https://en.wikipedia.org/wiki/Init#SYSV).** Traditional UNIX System V init system that everybody
+tries to replace :)
 
 ## Plan ideas
 
