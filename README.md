@@ -174,7 +174,7 @@ For now, we mostly interested in Type-2 hypervisors. They allow to run local clu
 
 #### 🌀 **UNIX init systems**
 
-Init system is important, because it is a built-in and "OS native" functionality to manage lifetime of processeses
+Init system is important, because it is a built-in and "OS native" functionality to manage lifetime of processes
 and, with modern init systems, even containers. Besides this, init system defines behaviour of operating system 
 throughout the lifetime.
 
