@@ -25,6 +25,11 @@ Any proposal, suggestion, fix or implementation are welcome!
 5. Third party software can be both hosted or available in the cloud
 6. Paralect specific apps and tools are also part of Plato
 
+# Documentation
+
+|📖 [Documentation](docs/README.md)|
+|---------------------------------|
+
 # Technology Proposal
 
 _This is a preliminary proposal that is changing every day. Share your 
