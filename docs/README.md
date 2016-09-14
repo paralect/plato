@@ -13,10 +13,16 @@ for Linux, Mac and Windows that will automatically update. We use version 1.12.
 2. [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads). Do not use package managers. 
 Download from official site. We use version 5.1.6.
 
-
-2. [Install Vagrant](https://www.vagrantup.com/downloads.html). Do not use package managers.
+3. [Install Vagrant](https://www.vagrantup.com/downloads.html). Do not use package managers.
 Download from official site. We use version 1.8.5.
 
+Check versions:
+
+```bash
+$ docker --version                # 1.12
+$ virtualbox --help | head -n 3   # 5.1.6
+$ vagrant --version               # 1.8.5
+```
 
 
 
