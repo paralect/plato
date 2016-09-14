@@ -1,5 +1,6 @@
 *.swp
 *~
+.vagrant/
 
 ### OSX ###
 .DS_Store
