@@ -1,6 +1,8 @@
 *.swp
 *~
 .vagrant/
+/go/bin
+/.idea
 
 ### OSX ###
 .DS_Store

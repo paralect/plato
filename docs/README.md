@@ -16,14 +16,39 @@ Download from official site. We use version 5.1.6.
 3. [Install Vagrant](https://www.vagrantup.com/downloads.html). Do not use package managers.
 Download from official site. We use version 1.8.5.
 
-Check versions:
+4. [Install Go](https://golang.org/dl/). Do not use package managers. Download from official site.
+We use version 1.7.1. Check [this page](https://golang.org/doc/install) for installation instructions. 
+
+Check your installation and versions:
 
 ```bash
 $ docker --version                # 1.12
 $ virtualbox --help | head -n 3   # 5.1.6
 $ vagrant --version               # 1.8.5
+$ go version                      # 1.7.1    
 ```
 
+### Enter Plato development shell
+
+In the root project folder type:
+
+```bash
+$ bin/shell 
+```
+
+You are now inside Plato development shell which configures all required environment variables. 
+Type `exit` if you want to go back to normal shell.
+
+### Build Plato CLI tool
+
+Inside Plato development shell type the following:
+
+```bash
+$ go install plato
+$ plato --version     
+```
+
+If you see something like `Plato 0.1`, it means we are done. Congratulations!
 
 
 
