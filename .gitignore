@@ -1,8 +1,15 @@
-*.swp
-*~
 .vagrant/
-/go/bin
+/.cache
+
+### Node.js/npm ###
+node_modules
+/npm-debug.log
+
+### Editors ###
+*~
+*.swp
 /.idea
+/.vscode
 
 ### OSX ###
 .DS_Store

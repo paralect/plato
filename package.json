@@ -1,0 +1,15 @@
+{
+  "name": "plato",
+  "version": "1.0.0",
+  "description": "Plato",
+  "repository": "git@github.com:paralect/plato.git",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint ."
+  },
+  "devDependencies": {
+    "eslint": "3.9.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
